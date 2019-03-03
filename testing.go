@@ -2,6 +2,11 @@ package testing
 
 import "testing"
 
+// Error unwraps the message in error and calls Fail
+func Error(t *testing.T, expected interface{}, err error) {
+	Fail(t, expected, err.Error())
+}
+
 // Fail wraps the call to t.Errorf and provides
 // a consistent message for failed tests by
 // accepting the expected and actual values
