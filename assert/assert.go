@@ -11,7 +11,7 @@ func Error(t *goTesting.T, expected interface{}, err error) {
 // a consistent message for failed tests by
 // accepting the expected and actual values
 func Fail(t *goTesting.T, expected, actual interface{}) {
-	t.Errorf("expected: %s, actual %s", expected, actual)
+	t.Errorf("expected: %s, actual: %s", expected, actual)
 }
 
 // Log wraps the call to t.Log
